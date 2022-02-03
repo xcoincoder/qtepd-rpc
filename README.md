@@ -1,22 +1,22 @@
-qtumd-rpc.js
+qtepd-rpc.js
 ===============
 
-A client library to connect to QTUM Core RPC in JavaScript.
+A client library to connect to QTEP Core RPC in JavaScript.
 
 ## Get Started
 
-qtumd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+qtepd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install qtumd-rpc
+npm install qtepd-rpc
 ```
 
 ## Examples
 
 ```javascript
 var run = function() {
-  var qtumcore = require('qtumcore');
-  var RpcClient = require('qtumd-rpc');
+  var qtepcore = require('qtepcore');
+  var RpcClient = require('qtepd-rpc');
 
   var config = {
     protocol: 'http',
@@ -52,7 +52,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new qtumcore.Transaction(rawtx.result);
+          var tx = new qtepcore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
